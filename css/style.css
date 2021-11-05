@@ -1,0 +1,790 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    position: relative;
+}
+.loader{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 6;
+    background-color: #1b1818f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loader .fa-spinner{
+    font-size: 60px;
+    z-index: 7;
+    bottom: 50%;
+    left: 50%;
+    color: white;
+    animation: loader 1.2s linear infinite;
+}
+@keyframes loader{
+    3%{
+        color: rgb(221, 144, 144);
+    }
+    10%{
+        color: rgb(255, 0, 0);
+    }
+    20%{
+        color: rgb(250, 72, 1);
+    }
+    30%{
+        color: rgb(255, 166, 0);
+    }
+    40%{
+        color: rgb(253, 237, 8);
+    }
+    50%{
+        color: rgb(196, 253, 8);
+    }
+    60%{
+        color: rgb(118, 253, 8);
+    }
+    70%{
+        color: rgb(77, 253, 8);
+    }
+    80%{
+        color: rgb(29, 253, 8);
+    }
+    90%{
+        color: rgba(10, 238, 48, 0.938);
+    }
+    100%{
+        color: rgb(8, 253, 171);
+    }
+    to{
+        transform: rotate(270deg);
+    }
+}
+#top {
+    display: none;
+    position: fixed;
+    right: 5%;
+    bottom: 2%;
+    cursor: pointer;
+    z-index: 10;
+}
+#top .fa-arrow-circle-up {  
+    font-size: 24px;
+    width: 30px;
+    height: 30px;  
+    color:#0474ae;
+}
+.header_top{
+    width: 100%;
+    height: 80px;
+    background: #ffffff;
+}
+.header_top .logo_X{
+    height: 80px;
+    width: 25%;
+    border-right: 2px solid #F4F4F4;
+}
+ .logo_X .logotip {
+    font-size: 60px;
+    color:#0474ae;
+    text-decoration: none;
+    padding: 0px 39%;   
+}
+.header_top .logo_X .logotip .fa{
+    margin-top: 14px;
+}
+.header_top .logo_fed{
+    width: 15%;
+    height: 80px;   
+    text-align: center;
+    transition:   500ms;
+}
+.header_top .logo_fed a{
+    text-align: center ;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+.header_top .logo_fed p{
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: 600;   
+}
+.header_top .logo_fed:hover{
+    border: none;
+    border-bottom: 4px solid #0474ae;
+}
+.active{
+   border: none;
+    border-bottom: 4px solid #0474ae;
+}
+.header_top .logo_fed a .fa{
+  margin-top: 22px;
+}
+.header_top .box_profel{
+    display: flex;
+}
+.header_top .box_profel img{
+    width: 14%;
+    margin: 29px 32px 6px 30px;     
+}
+.header_top .box_profel p{
+    margin-bottom: 0;
+    margin-top: 24px;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 500;   
+}
+.header_top .box_profel p span{
+    color: rgba(24, 24, 24, 0.2);
+}
+.header_top .box_profel a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #747474;
+}
+.header_top .box_profel a span{
+    color: #02B033;
+}
+.header_top .box_profel .box_b .fa-long-arrow-right{
+    transform: rotate(310deg);
+}
+.header_top form{
+    width: 100%;
+    height: 80px;
+    border-left: 2px solid #F4F4F4;
+}
+.header_top form input{
+    border: none;
+    padding: 20px 0 20px 5px;
+    color: #030303;
+}
+.header_top form .fa-search{
+    font-size: 24px;
+    color: #0275B1;
+    margin: 28px 12px ;
+}
+.header_top .box_profel{
+    border-right: 2px solid #F4F4F4;
+    border-left: 2px solid #F4F4F4;
+    height: 80px;
+}
+.header_top .logo_fell .fa-ellipsis-h{
+    margin: 22px 30px 0px 30px;
+    font-size: 26px;
+}
+.header_top .logo_fell  a{    
+    color: black;
+    text-decoration: none;
+}
+.header_top .logo_fell p{
+    margin: 0px 20px;
+}
+.header_top .logo_fell {
+    width: 50%;
+    height: 80px;   
+    border-right: 2px solid #F4F4F4;    
+}
+.search {
+    width: 100%;
+    text-align: center;
+    margin-top: 45px;
+    /*display: none;*/
+    position: absolute;
+    top: -210px;
+    left: 0px;
+    z-index: 2;
+}
+:focus{
+    outline: none;
+}
+.search form .form_search {
+    padding: 20px 30px;
+    width: 63%;
+    border-radius: 13px;
+    background: #decece;
+    box-shadow:  16px 16px 32px #bdafaf,
+                 -16px -16px 32px #ffeded;
+    border: 1px solid transparent;
+}
+.search form .button {
+    padding: 19px;
+    border: 1px solid transparent;   
+    cursor: pointer;
+    border-radius: 13px;
+    background: #decece;
+    box-shadow:  16px 16px 32px #bdafaf,
+                 -16px -16px 32px #ffeded;
+}
+.search h2 {
+    margin-left: 1244px;
+    margin-top: -90px;
+}
+.search h2 a {
+    color: #000000;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    padding: 17px 20px;
+    border-radius: 13px;
+    background: #decece;
+    box-shadow:  16px 16px 32px #bdafaf,
+                 -16px -16px 32px #ffeded;
+}
+/* header menu media */
+/* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+section{
+    width: 100%;
+    background: #E5E5E5; 
+}
+section .new_post{
+    width: 100%;
+    /* height: 135px; */
+    background: #fffdfd;
+    box-shadow:  8px 8px 16px #a09494,
+                 -8px -8px 16px #ffffff;
+    margin-top: 40px;
+    border: none;
+    border-radius: 8px;
+}
+section .new_post input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #F4F4F4;
+    margin-top: 20px;  
+}
+section .new_post a{
+    font-size: 24px;
+    color:  #1b1a1a3f;
+}
+section .new_post #wha{
+    font-size: 16px;
+}
+section .new_post #what{
+    margin-left: 10px;
+    border: transparent;
+    background: transparent;
+    color:  #1b1a1a3f
+}
+section .new_post #sam{
+    border: none;
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+section .new_post #sam .fa-telegram{
+    font-size: 30px;
+    color: #0474ae;
+}
+section .my-profel{
+    position: relative;
+    width: 100%;
+    height: 290px;
+    border-radius: 8px;
+    background: #fffdfd;
+    box-shadow:  8px 8px 16px #a09494,
+                 -8px -8px 16px #ffffff;
+    margin-top: 40px;
+}
+section .my-profel h3{
+    font-size: 22px;
+    font-weight: 400;
+    color: #0474ae;
+    text-align: center;
+    margin-top: 65px;
+}
+section .my-profel a{
+    font-size: 22px;
+    font-weight: 400;
+    color: #0474ae;
+    text-align: center;
+    margin-left: 14%;   
+}
+section .bot{
+    background: #E5E5E5;
+    border: none;
+    margin: auto;
+    text-align: center;
+    margin: 40px auto;   
+}
+section .tedbell{
+    width: 100%;
+    border-radius: 8px;
+    background: #fffdfd;
+    box-shadow:  8px 8px 16px #a09494,
+                 -8px -8px 16px #ffffff;
+}
+section .wwww .tedbell h2{
+    font-size: 18px;
+    font-weight: 400;
+    color:  #1b1a1a3f;
+    margin-left: 10px;
+    padding-top: 20px;    
+}
+section .wwww .tedbell .ios{   
+    font-size: 18px;
+    font-weight: 400;
+    color:  #1b1a1a3f;
+}
+section .wwww .tedbell .w{
+    margin-left: 0;
+    padding-top: 0;
+    color: black;
+}
+section .wwww .tedbell img  {
+    margin-left: 20px;
+}
+section .wwww .tedbell p{
+    text-align: justify;
+    margin-top: 15px;
+}
+section .wwww .tedbell .more{
+   border: transparent;
+   background: transparent;
+   margin-top: 20px;
+   margin-left: 20px;
+   color:#0275B1 ; 
+}
+section .wwww .tedbell li .fa{
+    font-size: 28px;
+   color:#0275B1 ; 
+   margin-bottom: 20px;
+}
+section .wwww .tedbell li span{
+    font-size: 18px;
+   color:#0275B1 ; 
+}
+section .wwww .tedbell .window{
+    width: 100%;
+    background: #E9F0F8;
+    border: transparent;
+    border-radius: 8px;
+}
+section .wwww .tedbell .window .fa-file-text-o{
+    font-size: 26px;
+    padding: 10px 15px;
+}
+section .wwww .tedbell .window .fa-cloud-download{
+    font-size: 28px;
+    color:#0275B1 ;
+}
+section .card-chat{  
+    width: 100%; 
+    background: url('../img/portfolio_1.jpg')  no-repeat center center / cover;
+    box-shadow:  8px 8px 16px #e7e2e2,
+                 -8px -8px 16px #ffffff;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+section .card-chat img{
+    display: block;
+  padding: 10px;
+    margin:  auto;  
+    border: 6px solid rgb(253, 253, 253) ;
+    border-radius: 70%;  
+}
+section .card-chat button{
+    width: 100%;
+    padding: 20px 0px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #0275B1;
+}
+section .card-chat p{
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 10px;
+}
+.positiv .messag{
+    position: absolute;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+    top: 35%;
+    left: 40%;
+    border-radius: 8px;
+    display: none;  
+}
+.positiv .messag p{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+}
+:focus{
+   outline: none; 
+}
+.positiv .messag input{
+    border: none;
+    margin-top: 60px;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.positiv .messag .send{
+    width: 100%;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #0275B1;
+    margin-bottom: 10px;
+}
+.positiv .messag .close{
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+     background-color: #0275B1;
+    margin-bottom: 10px;
+}
+section .coment{
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    background: #E5E5E5;
+    box-shadow:  8px 8px 16px #a09494,
+                 -8px -8px 16px #ffffff;
+}
+section .coment button{
+    border: 2px solid rgba(149, 95, 200, 0.842);
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+section .coment .setting1{
+    background: #252222d5;
+}
+section .coment .setting2{
+
+    background: white;
+}
+section .coment .setting3{
+    background: #E5E5E5;
+}
+section .new_brandon{
+    width: 100%;
+    height: 402px;
+    background: #fffdfd;
+    box-shadow:  8px 8px 16px #a09494,
+                 -8px -8px 16px #ffffff;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+/* |||||||||||||||||||||||||||||||||||||||| */
+section .section_right a {
+    color: rgb(14, 15, 15);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+section a {
+    color: rgb(14, 15, 15);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+section .jquery_carusel{
+    width: 100%;
+    /* height: 331px; */
+    background: #fffdfd;
+    box-shadow:  8px 8px 16px #a09494,
+                 -8px -8px 16px #ffffff;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+section .jquery_carusel .item img{
+    border-radius: 8px;
+}
+/* section col 3 */
+section .my-profel .ggg{
+  
+width: 100%;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+}
+section .my-profel .bbb{
+    width: 30%;
+position: absolute;
+border: 5px solid white;
+border-radius: 50%;
+top: 30%;
+left: 36%;
+}
+
+/* |||||||||||||||||||||footer */
+
+footer{
+    width: 100%; 
+    background: #F7F9FB;
+    position: relative;
+    overflow: hidden;
+}
+footer .logo_X{
+    height: 80px;
+    width: 25%;   
+}
+footer .logo_X .logotip{
+    padding: 0px 39px  ;
+}
+footer h1{
+    position: absolute;
+    bottom: 20%;
+    left: 22%;
+    width: 58%;
+    font-size: 30px;
+    font-weight: 600;
+    color:#0275B1 ;
+    font-family: 'Fruktur', cursive;
+}
+/* ||||||||||||||||||||||||||||||||||||||||||||||||| */
+section .cards{
+    width: 100%;
+    height: 300px;
+    background-image: url('../img/portfolio_1.jpg');
+    box-shadow:  8px 8px 16px #a09494,
+    -8px -8px 16px #ffffff;
+margin-top: 40px;
+border-radius: 8px;
+}
+ section .cards img{
+     width: 100%;  
+     margin:20px auto;
+     border: 5px solid white;
+     border-radius: 50%;
+} 
+section .cards button{
+    background-color:#0275B1 ;
+    color: white;
+    width: 95%;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+section .cards p{
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+section .big-card{
+    width: 100%;
+    background-color: white;
+    box-shadow:  8px 8px 16px #a09494,
+    -8px -8px 16px #ffffff;
+margin-top: 40px;
+border-radius: 8px;
+}
+section .big-card h3{
+    font-size: 22px;
+    font-weight: 400;
+    color: black;
+    margin-top: 20px;
+}
+section .big-card .lok{
+    margin-top: 15px;
+    
+}
+section .big-card .fa-ellipsis-v{
+    font-size: 26px;
+    margin-top: 15px;   
+}
+section .big-card .liketop .fa-heart{
+    color: red;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: none;
+}
+section .big-card .liketop1 .t2{
+    color: red;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: none;
+}
+section .big-card .fa-heart-o{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+section .big-card .fa-comment-o{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+section .big-card .fa-telegram{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+section .big-card .fa-bookmark-o{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+@media (max-width:1200px){
+    section .my-profel .bbb {
+        width: 30%;
+        position: absolute;
+        border: 5px  solid white;
+        border-radius: 50%;
+        top: 23%;
+        left: 35%;
+    }
+}
+@media (max-width:992px){
+    section .my-profel .bbb {
+        width: 30%;
+        position: absolute;
+        border: 5px solid white;
+        border-radius: 50%;
+        top: 16%;
+        left: 35%;
+    }
+    section .coment button {
+        border: 2px  solid rgba(149, 95, 200, 0.842);
+        width: 35px;
+        height: 35px;
+        margin-top: 20px;
+        margin-left: 8px;
+        border-radius: 8px;
+    }
+}
+@media (max-width:768px){
+    section .my-profel {
+        position: relative;
+        width: 100%;
+        height: 210px;
+        border-radius: 8px;
+        background: #fffdfd;
+        box-shadow: 8px 8px 16px #a09494, -8px -8px 16px #ffffff;
+        margin-top: 40px ;
+    }
+    section .my-profel h3 {
+        font-size: 19px;
+        font-weight: 400;
+        color: #0474ae;
+        text-align: center;
+        margin-top: 36px;
+    }
+    section .my-profel a {
+        font-size: 16px;
+        font-weight: 400;
+        color: #0474ae;
+        text-align: center;
+        margin-left: 18%;
+    }
+}
+@media (max-width:576px){
+    .logo_X .logotip {
+        font-size: 56px;
+        color: #0474ae;
+        text-decoration: none;
+        padding: 0px 20%;
+    }
+    .search h2 a {
+        color: #000000;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 25px;
+        text-decoration: none;
+        position: absolute;
+        top: 75px;
+        right: 10px;
+        cursor: pointer;
+        padding: 17px  20px;
+        border-radius: 13px;
+        background: #decece;
+        box-shadow: 16px 16px 32px #bdafaf, -16px -16px 32px #ffeded;
+    }
+    section .my-profel {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+        background: #fffdfd;
+        box-shadow: 8px 8px 16px #a09494, -8px -8px 16px #ffffff;
+        margin-top: 40px;
+    }
+    section .my-profel a {
+        font-size: 16px;
+        font-weight: 400;
+        color: #0474ae;
+        text-align: center;
+        margin-left: 18%;
+    }
+    section .my-profel {
+        position: relative;
+        width: 100%;
+        height: 201px;
+        border-radius: 8px;
+        background: #fffdfd;
+        box-shadow: 8px 8px 16px #a09494, -8px -8px 16px #ffffff;
+        margin-top: 40px;
+    }
+    
+   section .my-profel a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0474ae;
+    text-align: center;
+    margin-left: 10%;
+}
+}
+@media (max-width:320px){
+    .logo_X .logotip {
+        font-size: 50px;
+        color: #0474ae;
+        text-decoration: none;
+        padding: 0px 17%;
+    }
+    .header_top .logo_fed a .fa {
+        margin-top: 14px;
+    }
+    .header_top .logo_fed a {
+        text-align: center;
+        font-size: 24px;
+        text-decoration: none;
+        color: black;
+    }
+    .search h2 a {
+        color: #000000;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 25px;
+        text-decoration: none;
+        position: absolute;
+        top: 75px;
+        right: 10px;
+        cursor: pointer;
+        padding: 17px 20px;
+        border-radius: 13px;
+        background: #decece;
+        box-shadow: 16px 16px 32px #bdafaf, -16px -16px 32px #ffeded;
+    }
+}
